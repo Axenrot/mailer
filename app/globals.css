@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../public/fonts/AbsolutPro/absolut-pro.css";
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: 8px;
+    scrollbar-color: #1f1f1f;
+  }
+
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    height: 8px !important;
+    width: 8px !important;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #ffffff !important;
+  }
+
+  *::-webkit-scrollbar-track:hover {
+    background-color: #f3f3f3 !important;
+  }
+
+  *::-webkit-scrollbar-track:active {
+    background-color: #ffffff !important;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    background-color: #1f1f1f !important;
+    border: 1px solid #ffffff !important;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #000000 !important;
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #000000 !important;
+  }
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 100%, 0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slideBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.zoomInUp {
+  animation-name: zoomInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 text-white flex items-center tracking-wider gap-2 transition-all duration-200 border-2 rounded-md cursor-pointer bg-black/80 hover:bg-white hover:text-black hover:border-black disabled:pointer-events-none disabled:opacity-80 disabled:bg-zinc-900;
+  }
+}

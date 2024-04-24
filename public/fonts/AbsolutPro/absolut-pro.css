@@ -1,0 +1,41 @@
+/* fonts.css */
+
+@font-face {
+  font-family: "AbsolutPro";
+  src: url("./Absolut_Pro_Thin.woff") format("woff"),
+    url("./Absolut_Pro_Thin.ttf") format("truetype"),
+    url("./Absolut_Pro_Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "AbsolutPro";
+  src: url("./Absolut_Pro_Light.woff") format("woff"),
+    url("./Absolut_Pro_Light.ttf") format("truetype"),
+    url("./Absolut_Pro_Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "AbsolutPro";
+  src: url("./Absolut_Pro.woff") format("woff"),
+    url("./Absolut_Pro.ttf") format("truetype"),
+    url("./Absolut_Pro.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "AbsolutPro";
+  src: url("./Absolut_Pro_Medium.woff") format("woff"),
+    url("./Absolut_Pro_Medium.ttf") format("truetype"),
+    url("./Absolut_Pro_Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "AbsolutPro";
+  src: url("./Absolut_Pro_Bold.woff") format("woff"),
+    url("./Absolut_Pro_Bold.ttf") format("truetype"),
+    url("./Absolut_Pro_Bold.otf") format("opentype");
+  font-weight: 700;
+}
