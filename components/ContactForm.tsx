@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import Modal from "@/components/Modal";
 import { Input, Select } from "rizzui";
 import { countryOptions, titleOptions } from "@/types/client";
 import toast from "react-hot-toast";
@@ -9,7 +8,6 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
   const [sending, setSending] = useState<boolean>(false);
   const [emailSent, setEmailSent] = useState<boolean>(false);
-  const [openModal, setOpenModal] = useState<boolean>(false);
   const [country, setCountry] = useState<any>(null);
   const [title, setTitle] = useState<any>(null);
   const [text, setText] = useState<string>("");
@@ -35,7 +33,6 @@ const ContactForm = () => {
       })
       .then(() => {
         setEmailSent(true);
-        setOpenModal(true);
         name.value = "";
         email.value = "";
         phone.value = "";
@@ -53,7 +50,6 @@ const ContactForm = () => {
 
   return (
     <div className="select-none flex justify-between h-full flex-col transition-all duration-500 w-full md:w-1/2 lg:w-2/3 gap-12">
-      <Modal modalOpen={openModal} setModalOpen={setOpenModal} />
       <span>
         <h1 className="font-bold flex text-4xl sm:text-6xl tracking-wide md:text-4xl lg:text-6xl whitespace-nowrap">
           Get in touch<p className="text-zinc-600">.</p>
