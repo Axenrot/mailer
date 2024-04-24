@@ -59,7 +59,7 @@ const ContactForm = () => {
           Get in touch<p className="text-zinc-600">.</p>
         </h1>
         <h2 className="flex text-2xl font-light md:text-2xl lg:text-3xl text-zinc-600">
-          I'm Hussein Khazaal, nice to meet you!
+          I&apos;m Hussein Khazaal, nice to meet you!
         </h2>
       </span>
       <form
